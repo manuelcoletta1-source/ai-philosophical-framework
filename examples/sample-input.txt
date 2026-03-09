@@ -1,0 +1,2 @@
+The AI system flagged a transaction as high risk and logged an alert in the monitoring system.
+The event was recorded at 2026-03-09T12:30:00Z and initiated a manual review.
