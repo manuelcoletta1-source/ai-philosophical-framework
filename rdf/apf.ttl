@@ -1,0 +1,78 @@
+@prefix apf: <https://example.org/ai-philosophical-framework#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+apf:AIPhilosophicalFramework a owl:Ontology ;
+    rdfs:label "AI Philosophical Framework Ontology" ;
+    rdfs:comment "A minimal ontology for representing operational events through Decision, Cost, Trace, and Time." .
+
+### Classes
+
+apf:OperationalEvent a owl:Class ;
+    rdfs:label "Operational Event" ;
+    rdfs:comment "An event that can be reconstructed through Decision, Cost, Trace, and Time." .
+
+apf:OpposableAct a owl:Class ;
+    rdfs:subClassOf apf:OperationalEvent ;
+    rdfs:label "Opposable Act" ;
+    rdfs:comment "An operational event that can be attributed, verified, or contested." .
+
+apf:DecisionChain a owl:Class ;
+    rdfs:label "Decision Chain" ;
+    rdfs:comment "A sequence of related operational events connected through causal or temporal relations." .
+
+apf:Agent a owl:Class ;
+    rdfs:label "Agent" ;
+    rdfs:comment "An entity responsible for initiating a decision." .
+
+apf:Cost a owl:Class ;
+    rdfs:label "Cost" ;
+    rdfs:comment "A consequence in the form of resource expenditure, risk, sacrifice, or irreversible change." .
+
+apf:Trace a owl:Class ;
+    rdfs:label "Trace" ;
+    rdfs:comment "An observable record or effect that allows reconstruction of an event." .
+
+### Properties
+
+apf:hasAgent a owl:ObjectProperty ;
+    rdfs:domain apf:OperationalEvent ;
+    rdfs:range apf:Agent ;
+    rdfs:label "has agent" .
+
+apf:hasCost a owl:DatatypeProperty ;
+    rdfs:domain apf:OperationalEvent ;
+    rdfs:range xsd:string ;
+    rdfs:label "has cost" .
+
+apf:hasDecision a owl:DatatypeProperty ;
+    rdfs:domain apf:OperationalEvent ;
+    rdfs:range xsd:string ;
+    rdfs:label "has decision" .
+
+apf:hasTrace a owl:DatatypeProperty ;
+    rdfs:domain apf:OperationalEvent ;
+    rdfs:range xsd:string ;
+    rdfs:label "has trace" .
+
+apf:hasTime a owl:DatatypeProperty ;
+    rdfs:domain apf:OperationalEvent ;
+    rdfs:range xsd:dateTime ;
+    rdfs:label "has time" .
+
+apf:hasContext a owl:DatatypeProperty ;
+    rdfs:domain apf:OperationalEvent ;
+    rdfs:range xsd:string ;
+    rdfs:label "has context" .
+
+apf:hasStatus a owl:DatatypeProperty ;
+    rdfs:domain apf:OperationalEvent ;
+    rdfs:range xsd:string ;
+    rdfs:label "has status" .
+
+apf:partOfDecisionChain a owl:ObjectProperty ;
+    rdfs:domain apf:OperationalEvent ;
+    rdfs:range apf:DecisionChain ;
+    rdfs:label "part of decision chain" .
