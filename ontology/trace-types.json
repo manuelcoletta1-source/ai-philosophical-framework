@@ -1,0 +1,41 @@
+{
+  "framework": "AI Philosophical Framework",
+  "version": "0.1",
+  "trace_types": [
+    {
+      "id": "TT-01",
+      "name": "Log Trace",
+      "description": "A trace recorded in application, system, or audit logs."
+    },
+    {
+      "id": "TT-02",
+      "name": "Document Trace",
+      "description": "A trace represented by a document, report, resolution, or formal record."
+    },
+    {
+      "id": "TT-03",
+      "name": "Database Trace",
+      "description": "A trace stored as a database entry, transaction record, or structured data update."
+    },
+    {
+      "id": "TT-04",
+      "name": "Sensor Trace",
+      "description": "A trace produced by a sensor, device measurement, or environmental signal."
+    },
+    {
+      "id": "TT-05",
+      "name": "Physical Trace",
+      "description": "A trace observable in the physical world as a material effect of an action."
+    },
+    {
+      "id": "TT-06",
+      "name": "Communication Trace",
+      "description": "A trace generated through messages, notifications, emails, or transmitted signals."
+    },
+    {
+      "id": "TT-07",
+      "name": "Regulatory Trace",
+      "description": "A trace produced through compliance actions, legal notices, or regulatory filings."
+    }
+  ]
+}
