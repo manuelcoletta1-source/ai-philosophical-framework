@@ -6,6 +6,9 @@
 apf:HumanResearcher a apf:Agent ;
     apf:hasStatus "verified" .
 
+apf:HumanComplianceAnalyst a apf:Agent ;
+    apf:hasStatus "verified" .
+
 apf:AIDecisionSystem a apf:Agent ;
     apf:hasStatus "verified" .
 
@@ -56,7 +59,7 @@ apf:Event004 a apf:OperationalEvent ;
     apf:partOfDecisionChain apf:Chain001 .
 
 apf:Event005 a apf:OperationalEvent ;
-    apf:hasAgent apf:HumanResearcher ;
+    apf:hasAgent apf:HumanComplianceAnalyst ;
     apf:hasDecision "Review flagged transaction" ;
     apf:hasCost "Analyst time and investigation resources" ;
     apf:hasTrace "Manual review record added to case management system" ;
