@@ -1,0 +1,41 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Decision Chain",
+  "description": "Represents a sequence of operational events connected through causal or temporal relationships.",
+  "type": "object",
+  "required": [
+    "chain_id",
+    "events"
+  ],
+  "properties": {
+    "chain_id": {
+      "type": "string",
+      "description": "Unique identifier for the decision chain"
+    },
+    "description": {
+      "type": "string",
+      "description": "Optional description of the decision chain"
+    },
+    "events": {
+      "type": "array",
+      "description": "Ordered list of operational events forming the chain",
+      "items": {
+        "$ref": "reality-event.schema.json"
+      }
+    },
+    "start_time": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Timestamp marking the start of the decision chain"
+    },
+    "end_time": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Timestamp marking the end of the decision chain"
+    },
+    "agent_group": {
+      "type": "string",
+      "description": "Optional description of the agents involved in the chain"
+    }
+  }
+}
