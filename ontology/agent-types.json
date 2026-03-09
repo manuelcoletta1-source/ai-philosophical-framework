@@ -1,0 +1,41 @@
+{
+  "framework": "AI Philosophical Framework",
+  "version": "0.1",
+  "agent_types": [
+    {
+      "id": "AT-01",
+      "name": "Human Individual",
+      "description": "A single human actor responsible for initiating a decision."
+    },
+    {
+      "id": "AT-02",
+      "name": "Human Collective",
+      "description": "A group of human actors jointly responsible for a decision."
+    },
+    {
+      "id": "AT-03",
+      "name": "Institutional Authority",
+      "description": "A formal organization or institutional body responsible for initiating or approving a decision."
+    },
+    {
+      "id": "AT-04",
+      "name": "Artificial Intelligence System",
+      "description": "A software system capable of generating decisions autonomously or semi-autonomously."
+    },
+    {
+      "id": "AT-05",
+      "name": "Autonomous Machine",
+      "description": "A physical system such as a robot, drone, or automated infrastructure executing decisions."
+    },
+    {
+      "id": "AT-06",
+      "name": "Hybrid Agent",
+      "description": "A combination of human and artificial systems jointly producing a decision."
+    },
+    {
+      "id": "AT-07",
+      "name": "Distributed System",
+      "description": "A network of interacting systems collectively generating operational events."
+    }
+  ]
+}
