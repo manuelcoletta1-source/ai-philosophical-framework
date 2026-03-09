@@ -1,0 +1,76 @@
+@prefix apf: <https://example.org/ai-philosophical-framework#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+### Agents
+
+apf:HumanResearcher a apf:Agent ;
+    apf:hasStatus "verified" .
+
+apf:AIDecisionSystem a apf:Agent ;
+    apf:hasStatus "verified" .
+
+apf:InstitutionalAuthority a apf:Agent ;
+    apf:hasStatus "verified" .
+
+### Operational Events
+
+apf:Event001 a apf:OperationalEvent ;
+    apf:hasAgent apf:HumanResearcher ;
+    apf:hasDecision "Publish a new research framework on GitHub" ;
+    apf:hasCost "Time investment, intellectual effort, and public exposure of ideas" ;
+    apf:hasTrace "Repository created, documentation published, and commit history recorded" ;
+    apf:hasTime "2026-03-09T13:15:00Z"^^xsd:dateTime ;
+    apf:hasContext "Open research publication" ;
+    apf:hasStatus "verified" .
+
+apf:Event002 a apf:OperationalEvent ;
+    apf:hasAgent apf:AIDecisionSystem ;
+    apf:hasDecision "Flag a financial transaction as high risk" ;
+    apf:hasCost "Potential delay, customer friction, and operational review workload" ;
+    apf:hasTrace "Risk score generated, alert logged, and transaction review initiated" ;
+    apf:hasTime "2026-03-09T12:30:00Z"^^xsd:dateTime ;
+    apf:hasContext "Automated fraud detection pipeline" ;
+    apf:hasStatus "verified" .
+
+apf:Event003 a apf:OperationalEvent ;
+    apf:hasAgent apf:InstitutionalAuthority ;
+    apf:hasDecision "Approve a new urban traffic restriction policy" ;
+    apf:hasCost "Administrative workload, enforcement costs, and public mobility impact" ;
+    apf:hasTrace "Official resolution published, enforcement notices issued, and public records updated" ;
+    apf:hasTime "2026-03-09T13:00:00Z"^^xsd:dateTime ;
+    apf:hasContext "Urban mobility and environmental regulation" ;
+    apf:hasStatus "verified" .
+
+### Decision Chain
+
+apf:Chain001 a apf:DecisionChain .
+
+apf:Event004 a apf:OperationalEvent ;
+    apf:hasAgent apf:AIDecisionSystem ;
+    apf:hasDecision "Flag a transaction as high risk" ;
+    apf:hasCost "Potential delay and operational review workload" ;
+    apf:hasTrace "Risk alert generated in monitoring system" ;
+    apf:hasTime "2026-03-09T14:00:00Z"^^xsd:dateTime ;
+    apf:hasContext "Automated fraud detection pipeline" ;
+    apf:hasStatus "verified" ;
+    apf:partOfDecisionChain apf:Chain001 .
+
+apf:Event005 a apf:OperationalEvent ;
+    apf:hasAgent apf:HumanResearcher ;
+    apf:hasDecision "Review flagged transaction" ;
+    apf:hasCost "Analyst time and investigation resources" ;
+    apf:hasTrace "Manual review record added to case management system" ;
+    apf:hasTime "2026-03-09T14:15:00Z"^^xsd:dateTime ;
+    apf:hasContext "Financial operations review" ;
+    apf:hasStatus "verified" ;
+    apf:partOfDecisionChain apf:Chain001 .
+
+apf:Event006 a apf:OperationalEvent ;
+    apf:hasAgent apf:InstitutionalAuthority ;
+    apf:hasDecision "Temporarily suspend transaction processing" ;
+    apf:hasCost "Customer friction and administrative burden" ;
+    apf:hasTrace "Formal suspension notice recorded and audit log updated" ;
+    apf:hasTime "2026-03-09T14:30:00Z"^^xsd:dateTime ;
+    apf:hasContext "Regulatory risk response" ;
+    apf:hasStatus "verified" ;
+    apf:partOfDecisionChain apf:Chain001 .
