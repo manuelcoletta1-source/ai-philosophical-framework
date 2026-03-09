@@ -1,19 +1,11 @@
 import json
 from typing import Dict, Any
 
-
-REQUIRED_FIELDS = ["decision", "cost", "trace", "time"]
+from validator import validate_event
 
 
 def analyze_event(event: Dict[str, Any]) -> Dict[str, Any]:
-    missing = [field for field in REQUIRED_FIELDS if field not in event or not event[field]]
-
-    if not missing:
-        status = "valid_operational_event"
-    elif len(missing) < len(REQUIRED_FIELDS):
-        status = "incomplete_event"
-    else:
-        status = "non_operational_event"
+    validation = validate_event(event)
 
     return {
         "decision": event.get("decision"),
@@ -21,8 +13,9 @@ def analyze_event(event: Dict[str, Any]) -> Dict[str, Any]:
         "trace": event.get("trace"),
         "time": event.get("time"),
         "agent": event.get("agent"),
-        "status": status,
-        "missing_fields": missing
+        "status": validation["status"],
+        "missing_fields": validation["missing_fields"],
+        "is_valid": validation["is_valid"]
     }
 
 
