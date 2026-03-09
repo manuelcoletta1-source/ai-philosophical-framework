@@ -1,0 +1,9 @@
+{
+  "agent": "AI decision system",
+  "decision": "Flag a financial transaction as high risk",
+  "cost": "Potential delay, customer friction, and operational review workload",
+  "trace": "Risk score generated, alert logged, and transaction review initiated",
+  "time": "2026-03-09T12:30:00Z",
+  "context": "Automated fraud detection pipeline",
+  "status": "verified"
+}
