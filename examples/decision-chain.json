@@ -1,0 +1,33 @@
+{
+  "chain_id": "CHAIN-2026-0001",
+  "description": "AI risk detection followed by human review and institutional action",
+  "events": [
+    {
+      "decision": "Flag a transaction as high risk",
+      "cost": "Potential delay and operational review workload",
+      "trace": "Risk alert generated in monitoring system",
+      "time": "2026-03-09T14:00:00Z",
+      "agent": "AI decision system",
+      "context": "Automated fraud detection pipeline"
+    },
+    {
+      "decision": "Review flagged transaction",
+      "cost": "Analyst time and investigation resources",
+      "trace": "Manual review record added to case management system",
+      "time": "2026-03-09T14:15:00Z",
+      "agent": "Human compliance analyst",
+      "context": "Financial operations review"
+    },
+    {
+      "decision": "Temporarily suspend transaction processing",
+      "cost": "Customer friction and administrative burden",
+      "trace": "Formal suspension notice recorded and audit log updated",
+      "time": "2026-03-09T14:30:00Z",
+      "agent": "Institutional compliance authority",
+      "context": "Regulatory risk response"
+    }
+  ],
+  "start_time": "2026-03-09T14:00:00Z",
+  "end_time": "2026-03-09T14:30:00Z",
+  "agent_group": "AI system, human analyst, institutional authority"
+}
