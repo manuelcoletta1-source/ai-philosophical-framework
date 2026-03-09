@@ -1,0 +1,43 @@
+{
+  "framework": "AI Philosophical Framework",
+  "version": "0.1",
+  "axioms": [
+
+    {
+      "id": "AX-01",
+      "name": "Operational Reality",
+      "statement": "An event becomes operationally real when a decision produces cost, trace, and temporal exposure."
+    },
+
+    {
+      "id": "AX-02",
+      "name": "Decision",
+      "statement": "A decision occurs when an agent selects one possibility among multiple alternatives."
+    },
+
+    {
+      "id": "AX-03",
+      "name": "Cost",
+      "statement": "Every real decision generates cost in the form of resources, risk, sacrifice, or irreversible change."
+    },
+
+    {
+      "id": "AX-04",
+      "name": "Trace",
+      "statement": "A trace is an observable effect that allows the reconstruction of an event."
+    },
+
+    {
+      "id": "AX-05",
+      "name": "Time",
+      "statement": "Time exposes events to verification, persistence, and possible decay."
+    },
+
+    {
+      "id": "AX-06",
+      "name": "Operational Sequence",
+      "statement": "Operational reality emerges through the sequence: Decision → Cost → Trace → Time."
+    }
+
+  ]
+}
